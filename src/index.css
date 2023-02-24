@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(0.25turn, #bbe2f3, #ebf8e1, #ffd8af);
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+}
+
+.app-header__title {
+  margin: 10px 20px 0px;
+  font-family: Arial, sans-serif;
+  color: rgb(129, 56, 56);
+  text-shadow: 2px 2px 2px rgb(243, 217, 217);
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.app-header__controls {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+
+.search,
+.add-new {
+  font-size: 14px;
+  padding: 5px;
+  margin: 8px;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.add-new {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bolder;
+  background-color: rgba(126, 250, 209, 0.815);
+  outline: none;
+  font-style: italic;
+}
+
+.note {
+  font-family: Arial, sans-serif;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: lightyellow;
+  border: 1px solid white;
+  box-shadow: 2px 2px 3px lightgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 166, 0, 0.555) 60%,
+    rgba(0, 255, 255, 0.479)
+  );
+}
+
+.note__title,
+.note__description {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+}
+
+.note__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.note__description {
+  flex-grow: 1;
+  font-size: 14px;
+  color: black;
+}
+
+.note__delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 15px;
+  color: black;
+  padding: 5px;
+}
+
+.note__delete:hover {
+  color: rgba(224, 24, 24, 0.616);
+  cursor: pointer;
+}
